@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshCart - Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛒 FreshCart Admin
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="user.html">User Module</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= ADMIN MODULE ================= -->
+
+    <main class="admin-page">
+
+        <section class="admin-header">
+
+            <h1>Admin Dashboard</h1>
+
+            <p>
+                Manage products, inventory, prices and orders.
+            </p>
+
+        </section>
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="admin-dashboard">
+
+            <div class="admin-card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+            <div class="admin-card">
+                <h3>Total Orders</h3>
+                <p id="totalOrders">0</p>
+            </div>
+
+            <div class="admin-card">
+                <h3>Available Stock</h3>
+                <p id="availableStock">0</p>
+            </div>
+
+            <div class="admin-card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADD PRODUCT ================= -->
+
+        <section class="admin-section">
+
+            <h2>➕ Add New Product</h2>
+
+            <form id="productForm">
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product name"
+                    required
+                >
+
+                <select id="productCategory" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Fruits">
+                        Fruits
+                    </option>
+
+                    <option value="Vegetables">
+                        Vegetables
+                    </option>
+
+                    <option value="Dairy">
+                        Dairy
+                    </option>
+
+                    <option value="Groceries">
+                        Groceries
+                    </option>
+
+                    <option value="Personal Care">
+                        Personal Care
+                    </option>
+
+                    <option value="Household">
+                        Household
+                    </option>
+
+                </select>
+
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price"
+                    min="1"
+                    required
+                >
+
+
+                <input
+                    type="number"
+                    id="productStock"
+                    placeholder="Stock quantity"
+                    min="0"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn"
+                >
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= INVENTORY ================= -->
+
+        <section class="admin-section">
+
+            <h2>📦 Inventory Management</h2>
+
+            <div id="inventoryContainer">
+
+                <!-- Inventory will be loaded by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ORDERS ================= -->
+
+        <section class="admin-section">
+
+            <h2>🛍️ Order Management</h2>
+
+            <div id="ordersContainer">
+
+                <!-- Orders will be loaded by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= USERS ================= -->
+
+        <section class="admin-section">
+
+            <h2>👥 Registered Users</h2>
+
+            <div id="usersContainer">
+
+                <!-- Users will be loaded by JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🛒 FreshCart</h3>
+
+        <p>
+            Admin Management System
+        </p>
+
+        <p>
+            © 2026 FreshCart | Online Grocery Store
+        </p>
+
+    </footer>
+
+
+    <!-- ADMIN JAVASCRIPT -->
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
